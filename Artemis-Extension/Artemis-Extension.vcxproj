@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8b59cbfb-a583-486d-bc29-0dda73daddd5}</ProjectGuid>
+    <RootNamespace>ArtemisExtension</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ExternalIncludePath>$(ProjectDir);$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExternalIncludePath>$(ProjectDir);$(ExternalIncludePath)</ExternalIncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)Libraries\DebugLib\Artemis.lib;$(ProjectDir)Libraries\DebugLib\Aurora.lib;$(ProjectDir)Libraries\DebugLib\ImGui.lib;$(ProjectDir)Libraries\DebugLib\MinHook.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>$(ProjectDir)Libraries\ReleaseLib\Artemis.lib;$(ProjectDir)Libraries\ReleaseLib\Aurora.lib;$(ProjectDir)Libraries\ReleaseLib\ImGui.lib;$(ProjectDir)Libraries\ReleaseLib\MinHook.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Artemis\Constants.h" />
+    <ClInclude Include="Artemis\Definitions.h" />
+    <ClInclude Include="Artemis\DrawManager.h" />
+    <ClInclude Include="Artemis\EventManager.h" />
+    <ClInclude Include="Artemis\Events.h" />
+    <ClInclude Include="Artemis\External.h" />
+    <ClInclude Include="Artemis\GameManager.h" />
+    <ClInclude Include="Artemis\KeybindManager.h" />
+    <ClInclude Include="Artemis\Manager.h" />
+    <ClInclude Include="Artemis\WindowManager.h" />
+    <ClInclude Include="Aurora\Array.h" />
+    <ClInclude Include="Aurora\Binary.h" />
+    <ClInclude Include="Aurora\CodeInjection.h" />
+    <ClInclude Include="Aurora\Color.h" />
+    <ClInclude Include="Aurora\Console.h" />
+    <ClInclude Include="Aurora\ConstexprMath.h" />
+    <ClInclude Include="Aurora\Definitions.h" />
+    <ClInclude Include="Aurora\DllInjection.h" />
+    <ClInclude Include="Aurora\Events.h" />
+    <ClInclude Include="Aurora\Exceptions.h" />
+    <ClInclude Include="Aurora\FileSystem.h" />
+    <ClInclude Include="Aurora\HDE\hde32.h" />
+    <ClInclude Include="Aurora\HDE\hde64.h" />
+    <ClInclude Include="Aurora\Logger.h" />
+    <ClInclude Include="Aurora\Memory.h" />
+    <ClInclude Include="Aurora\MemoryTypes.h" />
+    <ClInclude Include="Aurora\MemoryWin32.h" />
+    <ClInclude Include="Aurora\Pipe.h" />
+    <ClInclude Include="Aurora\ProcessInfo.h" />
+    <ClInclude Include="Aurora\Property.h" />
+    <ClInclude Include="Aurora\Shapes.h" />
+    <ClInclude Include="Aurora\SharedHandle.h" />
+    <ClInclude Include="Aurora\Signal.h" />
+    <ClInclude Include="Aurora\Thread.h" />
+    <ClInclude Include="Aurora\Time.h" />
+    <ClInclude Include="Aurora\Trampoline.h" />
+    <ClInclude Include="Aurora\Vector.h" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_dx11.h" />
+    <ClInclude Include="ImGui\imgui_impl_win32.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="ImGui\imstb_truetype.h" />
+    <ClInclude Include="MinHook\MinHook.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Artemis-Extension.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Libraries\DebugLib\Artemis.exp" />
+    <None Include="Libraries\DebugLib\Artemis.pdb" />
+    <None Include="Libraries\DebugLib\Aurora.exp" />
+    <None Include="Libraries\DebugLib\Aurora.pdb" />
+    <None Include="Libraries\DebugLib\ImGui.exp" />
+    <None Include="Libraries\DebugLib\ImGui.pdb" />
+    <None Include="Libraries\DebugLib\MinHook.exp" />
+    <None Include="Libraries\DebugLib\MinHook.pdb" />
+    <None Include="Libraries\ReleaseLib\Artemis.exp" />
+    <None Include="Libraries\ReleaseLib\Artemis.pdb" />
+    <None Include="Libraries\ReleaseLib\Aurora.exp" />
+    <None Include="Libraries\ReleaseLib\Aurora.pdb" />
+    <None Include="Libraries\ReleaseLib\ImGui.exp" />
+    <None Include="Libraries\ReleaseLib\ImGui.pdb" />
+    <None Include="Libraries\ReleaseLib\MinHook.exp" />
+    <None Include="Libraries\ReleaseLib\MinHook.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Libraries\DebugLib\Artemis.lib" />
+    <Library Include="Libraries\DebugLib\Aurora.lib" />
+    <Library Include="Libraries\DebugLib\ImGui.lib" />
+    <Library Include="Libraries\DebugLib\MinHook.lib" />
+    <Library Include="Libraries\ReleaseLib\Artemis.lib" />
+    <Library Include="Libraries\ReleaseLib\Aurora.lib" />
+    <Library Include="Libraries\ReleaseLib\ImGui.lib" />
+    <Library Include="Libraries\ReleaseLib\MinHook.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
